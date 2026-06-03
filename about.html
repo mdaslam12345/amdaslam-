@@ -64,19 +64,20 @@
             box-shadow: 0 20px 50px rgba(0,0,0,0.6); line-height: 1.9; color: #cbd5e1; font-size: 1.3rem;
         }
         
-        /* Premium Profile Image Style For About Page */
+        /* FIXED: Premium Profile Image Style For About Page (No Cropping) */
         .about-profile-img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            border: 3px solid var(--neon-purple);
+            width: 220px;
+            height: 220px;
+            border-radius: 15px;    /* Circle se badal kar sleek rounded square kiya */
+            border: 2px solid var(--neon-purple);
             box-shadow: 0 0 30px rgba(79, 172, 254, 0.5);
             margin-bottom: 35px;
-            object-fit: cover;
-            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            object-fit: contain;    /* Isse photo full aur clear dikhegi, kategi nahi */
+            background-color: rgba(19, 27, 46, 0.6);
+            transition: transform 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
         }
         .about-profile-img:hover {
-            transform: scale(1.05);
+            transform: scale(1.05) translateY(-5px);
             box-shadow: 0 0 40px var(--neon-cyan);
             border-color: var(--neon-cyan);
         }
@@ -109,7 +110,8 @@
             nav { padding: 15px; flex-direction: column; gap: 10px; }
             .about-section { padding: 120px 20px 40px; }
             .about-card { padding: 30px; font-size: 1.1rem; }
-            .about-profile-img { width: 150px; height: 150px; }
+            /* Mobile View adjustment for About Card Photo */
+            .about-profile-img { width: 180px; height: 180px; }
         }
     </style>
 </head>
@@ -129,7 +131,7 @@
         <h2 class="section-title">Biography</h2>
         <div class="about-card">
             
-            <!-- Profile Image Section Added Perfectly -->
+            <!-- Fixed Profile Image Section -->
             <center><img src="Profile. Jpg.jpeg" alt="Md Aslam Khan" class="about-profile-img"></center>
             
             <p>
