@@ -72,21 +72,21 @@
         /* Home Hero Section */
         #home { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; min-height: 100vh; position: relative; padding-top: 160px; }
         
-        /* FIXED: Premium Profile Image Card Style (No Cropping) */
+        /* FIX: Circle Shape Active + Full Face No Cropping */
         .profile-img {
-            width: 220px;
-            height: 220px;
-            border-radius: 15px;    /* Circle se badal kar sleek rounded square kiya */
-            border: 2px solid var(--neon-cyan);
-            box-shadow: 0 0 25px rgba(0, 242, 254, 0.4);
+            width: 190px;
+            height: 190px;
+            border-radius: 50%; /* Circle look safe */
+            border: 3px solid var(--neon-cyan);
+            box-shadow: 0 0 25px var(--neon-cyan);
             margin-bottom: 25px;
-            object-fit: contain;    /* Isse photo left/right se bilkul nahi kategi */
-            background-color: rgba(19, 27, 46, 0.6); /* Under-shadow box effect */
-            filter: drop-shadow(0 0 10px rgba(0,242,254,0.2));
+            object-fit: scale-down; /* Magic fix: photo automatic choti ho kar poori dikhegi */
+            background-color: #1e293b; /* Background matching filler padding */
+            padding: 5px;
             transition: transform 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
         }
         .profile-img:hover {
-            transform: scale(1.05) translateY(-5px);
+            transform: scale(1.05);
             box-shadow: 0 0 35px var(--neon-purple);
             border-color: var(--neon-purple);
         }
@@ -98,7 +98,6 @@
             filter: drop-shadow(0 0 20px rgba(0,242,254,0.4));
         }
         
-        /* University Typography Matching Name Style */
         .university-title {
             font-family: 'Orbitron', sans-serif;
             font-size: 2.2rem;
@@ -112,7 +111,6 @@
         
         #home p { font-size: 1.5rem; color: #94a3b8; max-width: 700px; margin-bottom: 40px; letter-spacing: 1px; }
         
-        /* Premium Glowing Button */
         .btn { 
             background: transparent; color: #fff; padding: 14px 40px; border-radius: 5px; font-weight: 700; 
             border: 2px solid var(--neon-cyan); cursor: pointer; text-transform: uppercase; font-family: 'Orbitron', sans-serif;
@@ -177,14 +175,12 @@
             .university-title { font-size: 1.4rem; letter-spacing: 2px; }
             .section-title { font-size: 2rem; }
             section { padding: 100px 20px 40px; }
-            /* Mobile View adjustment for Card Photo */
-            .profile-img { width: 180px; height: 180px; }
+            .profile-img { width: 160px; height: 160px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Premium Navigation -->
     <nav>
         <div class="logo">MAK.ANALYTICS</div>
         <ul class="nav-links">
@@ -196,9 +192,8 @@
         </ul>
     </nav>
 
-    <!-- Home Section -->
     <section id="home">
-        <!-- Profile Image Linked with Rounded Square Card Look -->
+        <!-- Exact image file path with clean scaled circular container -->
         <img src="Profile. Jpg.jpeg" alt="Md Aslam Khan" class="profile-img">
         
         <h1>MD ASLAM <span>KHAN</span></h1>
@@ -207,7 +202,7 @@
         <a href="#analysis" class="btn">Launch Dashboard</a>
     </section>
 
-    <!-- Ultra 3D Flashcards Section -->
+    <!-- Rest of code remains safe and premium -->
     <section id="analysis">
         <h2 class="section-title">Core Metrics</h2>
         <div class="flashcard-container">
@@ -250,7 +245,6 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects">
         <h2 class="section-title">Featured Work</h2>
         <div class="projects-grid">
@@ -269,7 +263,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact">
         <h2 class="section-title">Secure Connection</h2>
         <div class="contact-box">
