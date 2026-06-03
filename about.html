@@ -64,6 +64,23 @@
             box-shadow: 0 20px 50px rgba(0,0,0,0.6); line-height: 1.9; color: #cbd5e1; font-size: 1.3rem;
         }
         
+        /* Premium Profile Image Style For About Page */
+        .about-profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 3px solid var(--neon-purple);
+            box-shadow: 0 0 30px rgba(79, 172, 254, 0.5);
+            margin-bottom: 35px;
+            object-fit: cover;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+        .about-profile-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px var(--neon-cyan);
+            border-color: var(--neon-cyan);
+        }
+        
         .about-card h3 {
             font-family: 'Orbitron', sans-serif;
             color: var(--neon-cyan);
@@ -92,6 +109,7 @@
             nav { padding: 15px; flex-direction: column; gap: 10px; }
             .about-section { padding: 120px 20px 40px; }
             .about-card { padding: 30px; font-size: 1.1rem; }
+            .about-profile-img { width: 150px; height: 150px; }
         }
     </style>
 </head>
@@ -110,6 +128,10 @@
     <div class="about-section">
         <h2 class="section-title">Biography</h2>
         <div class="about-card">
+            
+            <!-- Profile Image Section Added Perfectly -->
+            <center><img src="Profile. Jpg.jpeg" alt="Md Aslam Khan" class="about-profile-img"></center>
+            
             <p>
                 Welcome to my digital arena. I am <span class="highlight">Md Aslam Khan</span>, an elite-level Cricket Analyst and Next-Gen Digital Content Creator proudly associated with <span class="highlight">Bangalore University</span>. For me, cricket is not merely a sport played with leather and willow—it is a sophisticated matrix of patterns, human psychology, and dynamic physics.
             </p>
