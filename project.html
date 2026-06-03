@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Md Aslam Khan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Premium Cyberpunk Themes & Reset */
+        :root {
+            --bg-dark: #090d16;
+            --card-bg: #131b2e;
+            --neon-cyan: #00f2fe;
+            --neon-purple: #4facfe;
+            --text-main: #f1f5f9;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            background-color: var(--bg-dark); 
+            color: var(--text-main); 
+            font-family: 'Rajdhani', sans-serif; 
+            font-size: 1.2rem;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+            position: relative;
+            padding-top: 120px;
+        }
+
+        /* Ambient Background Glow Particles */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 10% 20%, rgba(0, 242, 254, 0.05) 0%, transparent 50%),
+                        radial-gradient(circle at 90% 80%, rgba(79, 172, 254, 0.05) 0%, transparent 50%);
+            z-index: -1;
+        }
+
+        /* Glassmorphism Navigation */
+        nav { 
+            background: rgba(9, 13, 22, 0.8); 
+            position: fixed; width: 100%; top: 0; left: 0; z-index: 1000; 
+            padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; 
+            border-bottom: 1px solid rgba(0, 242, 254, 0.2); 
+            backdrop-filter: blur(15px);
+        }
+        .logo { 
+            font-family: 'Orbitron', sans-serif; 
+            font-size: 1.6rem; font-weight: 700; 
+            background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
+        }
+        .nav-links { display: flex; list-style: none; gap: 30px; }
+        .nav-links a { text-decoration: none; color: #94a3b8; font-weight: 700; transition: 0.3s; text-transform: uppercase; letter-spacing: 1px; }
+        .nav-links a:hover { color: var(--neon-cyan); text-shadow: 0 0 10px var(--neon-cyan); }
+
+        /* Container & Titles */
+        .projects-container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        .section-title { 
+            text-align: center; font-family: 'Orbitron', sans-serif; font-size: 2.8rem; margin-bottom: 20px; 
+            text-transform: uppercase; letter-spacing: 2px;
+            background: linear-gradient(180deg, #fff, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .section-subtitle { text-align: center; color: #94a3b8; margin-bottom: 60px; letter-spacing: 1px; }
+
+        /* ADVANCED 3D PROJECT FLASHCARDS GRID */
+        .project-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 40px; 
+        }
+        
+        .project-card { 
+            height: 450px; 
+            perspective: 1500px; 
+        }
+        
+        .card-inner { 
+            position: relative; width: 100%; height: 100%; text-align: center; 
+            transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+            transform-style: preserve-3d; 
+        }
+        
+        .project-card:hover .card-inner { 
+            transform: rotateY(180deg); 
+        }
+        
+        .card-front, .card-back { 
+            position: absolute; width: 100%; height: 100%; 
+            -webkit-backface-visibility: hidden; backface-visibility: hidden; 
+            border-radius: 20px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+        }
+        
+        /* Front Side Structure holding the exact images */
+        .card-front { 
+            background: var(--card-bg); 
+            border: 1px solid rgba(0, 242, 254, 0.15); 
+            display: flex; flex-direction: column;
+        }
+        
+        .card-front img { 
+            width: 100%; 
+            height: 82%; 
+            object-fit: cover; 
+            border-bottom: 2px solid rgba(0, 242, 254, 0.2);
+        }
+        
+        .card-front .image-title {
+            height: 18%; display: flex; align-items: center; justify-content: center;
+            font-family: 'Orbitron', sans-serif; font-size: 1.1rem; font-weight: 700;
+            color: var(--neon-cyan); letter-spacing: 1px; background: rgba(9, 13, 22, 0.5);
+        }
+        
+        /* Back Side Premium Details overlay */
+        .card-back { 
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); 
+            color: white; transform: rotateY(180deg); padding: 30px;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            border: 2px solid var(--neon-purple); box-shadow: 0 0 25px rgba(79, 172, 254, 0.3);
+        }
+        
+        .card-back h3 { 
+            font-family: 'Orbitron', sans-serif; margin-bottom: 15px; 
+            color: var(--neon-cyan); text-transform: uppercase; font-size: 1.4rem;
+        }
+        
+        .card-back p { 
+            font-size: 1.1rem; line-height: 1.6; color: #cbd5e1; 
+        }
+
+        /* Return Navigation Button */
+        .back-btn { 
+            display: inline-block; margin: 60px auto 20px; text-decoration: none;
+            color: var(--neon-cyan); font-family: 'Orbitron', sans-serif; font-weight: 700;
+            border: 2px solid var(--neon-cyan); padding: 12px 35px; border-radius: 5px;
+            box-shadow: 0 0 15px rgba(0, 242, 254, 0.2); transition: all 0.4s ease; text-transform: uppercase;
+        }
+        .back-btn:hover { 
+            background: var(--neon-cyan); color: var(--bg-dark); box-shadow: 0 0 30px var(--neon-cyan); transform: translateY(-3px);
+        }
+
+        footer { border-top: 1px solid rgba(255,255,255,0.05); text-align: center; padding: 40px; margin-top: 80px; color: #475569; font-size: 1rem; font-family: 'Orbitron', sans-serif; }
+
+        @media (max-width: 768px) {
+            nav { padding: 15px; flex-direction: column; gap: 10px; }
+            .section-title { font-size: 2rem; }
+            .project-grid { gap: 30px; }
+            .project-card { height: 400px; }
+            body { padding-top: 140px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Premium Navigation Header -->
+    <nav>
+        <div class="logo">MAK.ANALYTICS</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Projects Space -->
+    <div class="projects-container">
+        <h2 class="section-title">Analysis Showcase</h2>
+        <p class="section-subtitle">Interact with the 3D flashcards below to reveal advanced breakdown case studies.</p>
+        
+        <div class="project-grid">
+            
+            <!-- Flashcard 1: Virat Kohli Celebration (1000160537.jpg) -->
+            <div class="project-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="1000160537.jpg" alt="Virat Kohli Elite Analysis">
+                        <div class="image-title">CASE STUDY 01</div>
+                    </div>
+                    <div class="card-back">
+                        <h3>Clutch Mentality</h3>
+                        <p>A comprehensive strategic exploration of historical run chases, peak mental pressure handling formulas, and anchor-innings metric mapping in high-voltage tournaments.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 2: Mohammad Siraj Ball Show (1000160541.jpg) -->
+            <div class="project-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="1000160541.jpg" alt="Seam Position Strategy">
+                        <div class="image-title">CASE STUDY 02</div>
+                    </div>
+                    <div class="card-back">
+                        <h3>Seam Mathematics</h3>
+                        <p>Analyzing optimal ball release indices, dynamic cross-wind impacts, and variable pitch moisture tracking to dissect lethal test match spells.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 3: Mohammad Siraj Celebrating (1000160540.jpg) -->
+            <div class="project-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="1000160540.jpg" alt="Siraj Spell Breakdowns">
+                        <div class="image-title">CASE STUDY 03</div>
+                    </div>
+                    <div class="card-back">
+                        <h3>White-Ball Spells</h3>
+                        <p>Decoding powerplay swing patterns, tactical setup mechanics for top-order batsmen, and defensive field optimization metrics during death-over pressure shifts.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 4: Virat Kohli WTC Smiling (1000160558.jpg) -->
+            <div class="project-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="1000160558.jpg" alt="Virat Kohli Red Ball Analysis">
+                        <div class="image-title">CASE STUDY 04</div>
+                    </div>
+                    <div class="card-back">
+                        <h3>Red-Ball Supremacy</h3>
+                        <p>A breakdown of technique adjustments in overseas conditions, structural tracking of defensive shot selection ranges against premium pace attacks.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <center><a href="index.html" class="back-btn">← Return To Dashboard</a></center>
+    </div>
+
+    <footer>
+        <p>© 2026 MD ASLAM KHAN. ARCHITECTED VIA GITHUB PAGES.</p>
+    </footer>
+
+</body>
+</html>
