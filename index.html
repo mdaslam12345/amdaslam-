@@ -3,80 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Md Aslam Khan | Cricket Analyst & Creator</title>
-    <!-- Google Fonts for modern look -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Md Aslam Khan | Premium Cricket Analyst</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
     <style>
-        /* General Reset */
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        body { background-color: #0f172a; color: #f8fafc; scroll-behavior: smooth; }
-        a { text-decoration: none; color: inherit; }
+        /* Premium Variables & Reset */
+        :root {
+            --bg-dark: #090d16;
+            --card-bg: #131b2e;
+            --neon-cyan: #00f2fe;
+            --neon-purple: #4facfe;
+            --text-main: #f1f5f9;
+        }
 
-        /* Navigation Bar */
-        nav { background: rgba(15, 23, 42, 0.95); position: fixed; width: 100%; top: 0; left: 0; z-index: 1000; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #1e293b; backdrop-filter: blur(10px); }
-        .logo { font-size: 1.5rem; font-weight: 700; color: #38bdf8; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            background-color: var(--bg-dark); 
+            color: var(--text-main); 
+            font-family: 'Rajdhani', sans-serif; 
+            font-size: 1.2rem;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Live Animated Background Effect */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 20% 30%, rgba(79, 172, 254, 0.05) 0%, transparent 40%),
+                        radial-gradient(circle at 80% 70%, rgba(0, 242, 252, 0.05) 0%, transparent 40%);
+            z-index: -1;
+            animation: pulseBg 8s infinite alternate linear;
+        }
+
+        @keyframes pulseBg {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+
+        /* Premium Glassmorphism Navbar */
+        nav { 
+            background: rgba(9, 13, 22, 0.8); 
+            position: fixed; width: 100%; top: 0; z-index: 1000; 
+            padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; 
+            border-bottom: 1px solid rgba(0, 242, 254, 0.2); 
+            backdrop-filter: blur(15px);
+        }
+        .logo { 
+            font-family: 'Orbitron', sans-serif; 
+            font-size: 1.6rem; font-weight: 700; 
+            background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
+        }
         .nav-links { display: flex; list-style: none; gap: 30px; }
-        .nav-links a { font-weight: 500; font-size: 1rem; transition: color 0.3s; }
-        .nav-links a:hover { color: #38bdf8; }
+        .nav-links a { text-decoration: none; color: #94a3b8; font-weight: 700; transition: 0.3s; text-transform: uppercase; letter-spacing: 1px; }
+        .nav-links a:hover { color: var(--neon-cyan); text-shadow: 0 0 10px var(--neon-cyan); }
 
-        /* Sections General */
-        section { padding: 100px 50px 80px; max-width: 1200px; margin: 0 auto; }
-        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 50px; color: #38bdf8; position: relative; }
-        .section-title::after { content: ''; display: block; width: 60px; height: 4px; background: #0ea5e9; margin: 10px auto 0; border-radius: 2px; }
+        /* Sections */
+        section { padding: 120px 40px 80px; max-width: 1200px; margin: 0 auto; }
+        .section-title { 
+            text-align: center; font-family: 'Orbitron', sans-serif; font-size: 2.8rem; margin-bottom: 60px; 
+            text-transform: uppercase; letter-spacing: 2px;
+            background: linear-gradient(180deg, #fff, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
 
-        /* Home Section */
-        #home { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; min-height: 100vh; padding-top: 150px; }
-        #home h1 { font-size: 3.5rem; font-weight: 700; margin-bottom: 10px; line-height: 1.2; }
-        #home h1 span { color: #38bdf8; }
-        #home p { font-size: 1.2rem; color: #94a3b8; max-width: 600px; margin-bottom: 30px; }
-        .btn { background: #0ea5e9; color: white; padding: 12px 30px; border-radius: 30px; font-weight: 600; transition: background 0.3s, transform 0.2s; display: inline-block; }
-        .btn:hover { background: #0284c7; transform: translateY(-3px); }
+        /* 3D Live Home Hero Section */
+        #home { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; min-height: 100vh; position: relative; }
+        #home h1 { font-family: 'Orbitron', sans-serif; font-size: 4.5rem; font-weight: 700; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 2px; }
+        #home h1 span { 
+            background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple)); 
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; 
+            filter: drop-shadow(0 0 20px rgba(0,242,254,0.4));
+        }
+        #home p { font-size: 1.5rem; color: #94a3b8; max-width: 700px; margin-bottom: 40px; letter-spacing: 1px; }
+        
+        /* Premium Glowing Button */
+        .btn { 
+            background: transparent; color: #fff; padding: 14px 40px; border-radius: 5px; font-weight: 700; 
+            border: 2px solid var(--neon-cyan); cursor: pointer; text-transform: uppercase; font-family: 'Orbitron', sans-serif;
+            box-shadow: 0 0 15px rgba(0, 242, 254, 0.2); transition: all 0.4s ease; text-decoration: none;
+        }
+        .btn:hover { 
+            background: var(--neon-cyan); color: var(--bg-dark);
+            box-shadow: 0 0 30px var(--neon-cyan); transform: translateY(-3px);
+        }
 
-        /* About Section */
-        #about p { font-size: 1.1rem; line-height: 1.8; color: #cbd5e1; text-align: center; max-width: 800px; margin: 0 auto; }
+        /* About Section Premium Glass card */
+        .about-card {
+            background: linear-gradient(135deg, rgba(19,27,46,0.7) 0%, rgba(9,13,22,0.8) 100%);
+            border: 1px solid rgba(255,255,255,0.05); padding: 40px; border-radius: 15px;
+            text-align: center; max-width: 900px; margin: 0 auto; box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+        .about-card p { line-height: 1.8; color: #cbd5e1; font-size: 1.3rem; }
 
-        /* Flashcards Section (Cricket Analysis) */
-        .flashcard-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 20px; }
-        .card { height: 250px; perspective: 1000px; cursor: pointer; }
-        .card-inner { position: relative; width: 100%; height: 100%; text-align: center; transition: transform 0.6s; transform-style: preserve-3d; }
+        /* ULTRA 3D FLASHCARDS SECTION */
+        .flashcard-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 20px; }
+        .card { height: 320px; perspective: 1200px; }
+        .card-inner { position: relative; width: 100%; height: 100%; text-align: center; transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); transform-style: preserve-3d; }
         .card:hover .card-inner { transform: rotateY(180deg); }
-        .card-front, .card-back { position: absolute; width: 100%; height: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden; border-radius: 15px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; border: 1px solid #1e293b; }
-        .card-front { background: #1e293b; color: #38bdf8; font-size: 1.4rem; font-weight: 600; }
-        .card-front span { font-size: 3rem; margin-bottom: 10px; }
-        .card-back { background: #0ea5e9; color: white; transform: rotateY(180deg); font-size: 1.05rem; line-height: 1.6; }
+        
+        .card-front, .card-back { 
+            position: absolute; width: 100%; height: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden; 
+            border-radius: 20px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 30px; 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+        }
+        .card-front { 
+            background: var(--card-bg); border: 1px solid rgba(0, 242, 254, 0.15); color: var(--neon-cyan); 
+            font-family: 'Orbitron', sans-serif; font-size: 1.6rem; font-weight: 700;
+        }
+        .card-front::bottom { content: ''; width: 50px; height: 2px; background: var(--neon-cyan); margin-top: 15px; }
+        .card-front .icon { font-size: 4rem; margin-bottom: 20px; filter: drop-shadow(0 0 15px var(--neon-cyan)); }
+        
+        .card-back { 
+            background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); 
+            color: white; transform: rotateY(180deg); font-size: 1.2rem; line-height: 1.6;
+            border: 2px solid var(--neon-purple); box-shadow: 0 0 25px rgba(79, 172, 254, 0.4);
+        }
+        .card-back h3 { font-family: 'Orbitron', sans-serif; margin-bottom: 15px; color: var(--neon-cyan); }
 
-        /* Projects Section */
-        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .project-card { background: #1e293b; border-radius: 15px; padding: 25px; border: 1px solid #1e293b; transition: transform 0.3s; }
-        .project-card:hover { transform: translateY(-5px); border-color: #38bdf8; }
-        .project-card h3 { color: #38bdf8; margin-bottom: 15px; font-size: 1.3rem; }
-        .project-card p { color: #cbd5e1; font-size: 0.95rem; line-height: 1.6; margin-bottom: 15px; }
+        /* Premium Projects Section */
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .project-card { 
+            background: var(--card-bg); border-radius: 15px; padding: 35px; 
+            border: 1px solid rgba(255,255,255,0.03); position: relative; overflow: hidden; transition: all 0.4s ease;
+        }
+        .project-card::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px;
+            background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple));
+            transform: scaleX(0); transition: transform 0.4s ease; transform-origin: left;
+        }
+        .project-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.6); border-color: rgba(0, 242, 254, 0.2); }
+        .project-card:hover::before { transform: scaleX(1); }
+        .project-card h3 { color: #fff; font-family: 'Orbitron', sans-serif; margin-bottom: 15px; font-size: 1.4rem; }
+        .project-card p { color: #94a3b8; font-size: 1.1rem; line-height: 1.6; }
 
-        /* Contact Section */
+        /* Contact Section Premium Footer */
         #contact { text-align: center; }
-        .contact-info { margin-top: 20px; display: flex; flex-direction: column; gap: 15px; font-size: 1.2rem; }
-        .contact-info span { color: #38bdf8; font-weight: 600; }
+        .contact-box { background: var(--card-bg); padding: 40px; border-radius: 15px; display: inline-block; border: 1px solid rgba(79, 172, 254, 0.1); }
+        .contact-info { margin-top: 10px; display: flex; flex-direction: column; gap: 15px; font-size: 1.3rem; }
+        .contact-info span { color: var(--neon-cyan); font-weight: 700; font-family: 'Orbitron', sans-serif; }
 
-        /* Footer */
-        footer { border-top: 1px solid #1e293b; text-align: center; padding: 30px; margin-top: 50px; color: #64748b; font-size: 0.9rem; }
+        footer { border-top: 1px solid rgba(255,255,255,0.05); text-align: center; padding: 40px; margin-top: 80px; color: #475569; font-size: 1rem; font-family: 'Orbitron', sans-serif; }
 
-        /* Responsive Design */
+        /* Mobile Optimization */
         @media (max-width: 768px) {
-            nav { padding: 20px; flex-direction: column; gap: 15px; }
-            #home h1 { font-size: 2.5rem; }
-            section { padding: 80px 20px 40px; }
+            nav { padding: 15px; flex-direction: column; gap: 10px; }
+            #home h1 { font-size: 2.8rem; }
+            .section-title { font-size: 2rem; }
+            section { padding: 100px 20px 40px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
+    <!-- Premium Navigation -->
     <nav>
-        <div class="logo">MAK Analysis</div>
+        <div class="logo">MAK.ANALYTICS</div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#analysis">Analysis</a></li>
+            <li><a href="#analysis">3D Analysis</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -84,31 +172,33 @@
 
     <!-- Home Section -->
     <section id="home">
-        <h1>Hi, I am <span>Md Aslam Khan</span></h1>
-        <p>Cricket Analyst & Content Creator. breakdown karta hoon matches, stats, aur player strategies ko ek naye aur behtareen andaz mein.</p>
-        <a href="#analysis" class="btn">Explore My Analysis</a>
+        <h1>MD ASLAM <span>KHAN</span></h1>
+        <p>Advanced Cricket Analyst & Next-Gen Content Creator. Decoding statistics, match tactics, and elite player strategies.</p>
+        <a href="#analysis" class="btn">Launch Dashboard</a>
     </section>
 
     <!-- About Section -->
     <section id="about">
-        <h2 class="section-title">About Me</h2>
-        <p>Welcome to my space! Mera naam Md Aslam Khan hai. Mujhe cricket ke numbers, game ki tactics aur deep data analysis ke saath khelna pasand hai. Main videos, articles aur infographics ke zariye cricket fans ko match ke piche ki asal kahani batata hoon. Agar aap bhi cricket ko sirf ek game nahi balki ek emotion samajhte hain, toh aap sahi jagah aaye hain!</p>
+        <h2 class="section-title">About Leader</h2>
+        <div class="about-card">
+            <p>Mera naam Md Aslam Khan hai. Main cricket ke complex data metrics, underlying strategies aur match data visualizations ko analyze karke unhein simplified high-end video aur graphical content mein convert karta hoon. I am here to change the way fans perceive the game of cricket.</p>
+        </div>
     </section>
 
-    <!-- Analysis Section (Flashcards) -->
+    <!-- Ultra 3D Flashcards Section -->
     <section id="analysis">
-        <h2 class="section-title">Cricket Insights</h2>
-        <p style="text-align: center; color: #94a3b8; margin-bottom: 40px;">Cards ke upar cursor le jayein (ya tap karein) andar ki deep analysis dekhne ke liye!</p>
-        
+        <h2 class="section-title">Core Metrics</h2>
         <div class="flashcard-container">
             <!-- Card 1 -->
             <div class="card">
                 <div class="card-inner">
                     <div class="card-front">
-                        <span>📊</span> Match Strategy
+                        <div class="icon">⚡</div>
+                        <div>STRATEGY DECODE</div>
                     </div>
                     <div class="card-back">
-                        <p>Pitch conditions, toss ka role, aur powerplay ke dauran teams ki hitting strategy ka ek-ek point ka deep breakdown.</p>
+                        <h3>Match Tactics</h3>
+                        <p>Deep tactical breakdown of powerplay over rates, field placements, and target chasing formulas based on real-time stadium analytics.</p>
                     </div>
                 </div>
             </div>
@@ -116,10 +206,12 @@
             <div class="card">
                 <div class="card-inner">
                     <div class="card-front">
-                        <span>📈</span> Player Stats
+                        <div class="icon">📈</div>
+                        <div>PLAYER MATCHUPS</div>
                     </div>
                     <div class="card-back">
-                        <p>Player vs Player (Matchups), current form graph, aur death overs mein bowler vs batsman ke realistic data metrics.</p>
+                        <h3>Advanced Stats</h3>
+                        <p>Detailed historical metrics of Bowler vs Batsman rivalries, death overs execution data, and performance tracking models.</p>
                     </div>
                 </div>
             </div>
@@ -127,10 +219,12 @@
             <div class="card">
                 <div class="card-inner">
                     <div class="card-front">
-                        <span>🏆</span> Tournament Reviews
+                        <div class="icon">🏆</div>
+                        <div>TOURNAMENT META</div>
                     </div>
                     <div class="card-back">
-                        <p>IPL, ICC Tournaments aur major series ki pre-match predictions aur post-match ka mukammal aur sacha analysis.</p>
+                        <h3>Global Leagues</h3>
+                        <p>Complete statistical previews, algorithmic win predictions, and performance audits for IPL, ICC events, and bilateral series.</p>
                     </div>
                 </div>
             </div>
@@ -139,36 +233,37 @@
 
     <!-- Projects Section -->
     <section id="projects">
-        <h2 class="section-title">My Projects & Content</h2>
+        <h2 class="section-title">Featured Work</h2>
         <div class="projects-grid">
             <div class="project-card">
-                <h3>🎙️ Cricket Podcast & Commentary</h3>
-                <p>Matches ke baad live ya recorded detailed breakdowns jahan game-changing moments ko decode kiya jata hai.</p>
+                <h3>01 / Tactical Audio & Podcasts</h3>
+                <p>Post-match high-fidelity analysis breakdowns addressing critical match-turning micro-moments.</p>
             </div>
             <div class="project-card">
-                <h3>📉 Data Visualization Reports</h3>
-                <p>Complex cricket stats ko simple bar graphs aur charts mein badalkar samajhna taaki har fan analysis samajh sake.</p>
+                <h3>02 / Data Graphics</h3>
+                <p>Converting heavy raw cricketing data sheets into neat, highly engaging charts, graphs, and visual maps.</p>
             </div>
             <div class="project-card">
-                <h3>📱 Social Media Content Creation</h3>
-                <p>Instagram reels aur YouTube shorts ke liye short-form engaging cricket trivia aur interesting facts video series.</p>
+                <h3>03 / Viral Content Engine</h3>
+                <p>Tailored short-form content series focused on cricket trivia, mathematical analytics, and lesser-known sports science facts.</p>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
-        <h2 class="section-title">Contact Me</h2>
-        <p style="color: #94a3b8; margin-bottom: 30px;">Kisi bhi collaboration, sponsorship ya cricket discussion ke liye mujhe connect karein!</p>
-        <div class="contact-info">
-            <p>📧 Email: <span>your-email@example.com</span></p>
-            <p>🌐 Socials: <span>@mdaslamkhan (YouTube/Instagram)</span></p>
+        <h2 class="section-title">Secure Connection</h2>
+        <div class="contact-box">
+            <div class="contact-info">
+                <p>COMMUNICATION: <span>your-email@example.com</span></p>
+                <p>DIGITAL NETWORKS: <span>@mdaslamkhan (YouTube/Instagram)</span></p>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>© 2026 Md Aslam Khan. Built with Passion & GitHub Pages.</p>
+        <p>© 2026 MD ASLAM KHAN. ARCHITECTED VIA GITHUB PAGES.</p>
     </footer>
 
 </body>
