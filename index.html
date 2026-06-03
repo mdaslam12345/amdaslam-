@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md Aslam Khan | Cricket Analyst & Creator</title>
+    <!-- Google Fonts for modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: #0f172a; color: #f8fafc; scroll-behavior: smooth; }
+        a { text-decoration: none; color: inherit; }
+
+        /* Navigation Bar */
+        nav { background: rgba(15, 23, 42, 0.95); position: fixed; width: 100%; top: 0; left: 0; z-index: 1000; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #1e293b; backdrop-filter: blur(10px); }
+        .logo { font-size: 1.5rem; font-weight: 700; color: #38bdf8; }
+        .nav-links { display: flex; list-style: none; gap: 30px; }
+        .nav-links a { font-weight: 500; font-size: 1rem; transition: color 0.3s; }
+        .nav-links a:hover { color: #38bdf8; }
+
+        /* Sections General */
+        section { padding: 100px 50px 80px; max-width: 1200px; margin: 0 auto; }
+        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 50px; color: #38bdf8; position: relative; }
+        .section-title::after { content: ''; display: block; width: 60px; height: 4px; background: #0ea5e9; margin: 10px auto 0; border-radius: 2px; }
+
+        /* Home Section */
+        #home { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; min-height: 100vh; padding-top: 150px; }
+        #home h1 { font-size: 3.5rem; font-weight: 700; margin-bottom: 10px; line-height: 1.2; }
+        #home h1 span { color: #38bdf8; }
+        #home p { font-size: 1.2rem; color: #94a3b8; max-width: 600px; margin-bottom: 30px; }
+        .btn { background: #0ea5e9; color: white; padding: 12px 30px; border-radius: 30px; font-weight: 600; transition: background 0.3s, transform 0.2s; display: inline-block; }
+        .btn:hover { background: #0284c7; transform: translateY(-3px); }
+
+        /* About Section */
+        #about p { font-size: 1.1rem; line-height: 1.8; color: #cbd5e1; text-align: center; max-width: 800px; margin: 0 auto; }
+
+        /* Flashcards Section (Cricket Analysis) */
+        .flashcard-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 20px; }
+        .card { height: 250px; perspective: 1000px; cursor: pointer; }
+        .card-inner { position: relative; width: 100%; height: 100%; text-align: center; transition: transform 0.6s; transform-style: preserve-3d; }
+        .card:hover .card-inner { transform: rotateY(180deg); }
+        .card-front, .card-back { position: absolute; width: 100%; height: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden; border-radius: 15px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; border: 1px solid #1e293b; }
+        .card-front { background: #1e293b; color: #38bdf8; font-size: 1.4rem; font-weight: 600; }
+        .card-front span { font-size: 3rem; margin-bottom: 10px; }
+        .card-back { background: #0ea5e9; color: white; transform: rotateY(180deg); font-size: 1.05rem; line-height: 1.6; }
+
+        /* Projects Section */
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .project-card { background: #1e293b; border-radius: 15px; padding: 25px; border: 1px solid #1e293b; transition: transform 0.3s; }
+        .project-card:hover { transform: translateY(-5px); border-color: #38bdf8; }
+        .project-card h3 { color: #38bdf8; margin-bottom: 15px; font-size: 1.3rem; }
+        .project-card p { color: #cbd5e1; font-size: 0.95rem; line-height: 1.6; margin-bottom: 15px; }
+
+        /* Contact Section */
+        #contact { text-align: center; }
+        .contact-info { margin-top: 20px; display: flex; flex-direction: column; gap: 15px; font-size: 1.2rem; }
+        .contact-info span { color: #38bdf8; font-weight: 600; }
+
+        /* Footer */
+        footer { border-top: 1px solid #1e293b; text-align: center; padding: 30px; margin-top: 50px; color: #64748b; font-size: 0.9rem; }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav { padding: 20px; flex-direction: column; gap: 15px; }
+            #home h1 { font-size: 2.5rem; }
+            section { padding: 80px 20px 40px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">MAK Analysis</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#analysis">Analysis</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Hi, I am <span>Md Aslam Khan</span></h1>
+        <p>Cricket Analyst & Content Creator. breakdown karta hoon matches, stats, aur player strategies ko ek naye aur behtareen andaz mein.</p>
+        <a href="#analysis" class="btn">Explore My Analysis</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <p>Welcome to my space! Mera naam Md Aslam Khan hai. Mujhe cricket ke numbers, game ki tactics aur deep data analysis ke saath khelna pasand hai. Main videos, articles aur infographics ke zariye cricket fans ko match ke piche ki asal kahani batata hoon. Agar aap bhi cricket ko sirf ek game nahi balki ek emotion samajhte hain, toh aap sahi jagah aaye hain!</p>
+    </section>
+
+    <!-- Analysis Section (Flashcards) -->
+    <section id="analysis">
+        <h2 class="section-title">Cricket Insights</h2>
+        <p style="text-align: center; color: #94a3b8; margin-bottom: 40px;">Cards ke upar cursor le jayein (ya tap karein) andar ki deep analysis dekhne ke liye!</p>
+        
+        <div class="flashcard-container">
+            <!-- Card 1 -->
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <span>📊</span> Match Strategy
+                    </div>
+                    <div class="card-back">
+                        <p>Pitch conditions, toss ka role, aur powerplay ke dauran teams ki hitting strategy ka ek-ek point ka deep breakdown.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <span>📈</span> Player Stats
+                    </div>
+                    <div class="card-back">
+                        <p>Player vs Player (Matchups), current form graph, aur death overs mein bowler vs batsman ke realistic data metrics.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <span>🏆</span> Tournament Reviews
+                    </div>
+                    <div class="card-back">
+                        <p>IPL, ICC Tournaments aur major series ki pre-match predictions aur post-match ka mukammal aur sacha analysis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title">My Projects & Content</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>🎙️ Cricket Podcast & Commentary</h3>
+                <p>Matches ke baad live ya recorded detailed breakdowns jahan game-changing moments ko decode kiya jata hai.</p>
+            </div>
+            <div class="project-card">
+                <h3>📉 Data Visualization Reports</h3>
+                <p>Complex cricket stats ko simple bar graphs aur charts mein badalkar samajhna taaki har fan analysis samajh sake.</p>
+            </div>
+            <div class="project-card">
+                <h3>📱 Social Media Content Creation</h3>
+                <p>Instagram reels aur YouTube shorts ke liye short-form engaging cricket trivia aur interesting facts video series.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <p style="color: #94a3b8; margin-bottom: 30px;">Kisi bhi collaboration, sponsorship ya cricket discussion ke liye mujhe connect karein!</p>
+        <div class="contact-info">
+            <p>📧 Email: <span>your-email@example.com</span></p>
+            <p>🌐 Socials: <span>@mdaslamkhan (YouTube/Instagram)</span></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Md Aslam Khan. Built with Passion & GitHub Pages.</p>
+    </footer>
+
+</body>
+</html>
