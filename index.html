@@ -69,14 +69,27 @@
             background: linear-gradient(180deg, #fff, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         }
 
-        /* 3D Live Home Hero Section */
+        /* Home Hero Section */
         #home { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; min-height: 100vh; position: relative; }
-        #home h1 { font-family: 'Orbitron', sans-serif; font-size: 4.5rem; font-weight: 700; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 2px; }
+        #home h1 { font-family: 'Orbitron', sans-serif; font-size: 4.5rem; font-weight: 700; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 2px; line-height: 1.1; }
         #home h1 span { 
             background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple)); 
             -webkit-background-clip: text; -webkit-text-fill-color: transparent; 
             filter: drop-shadow(0 0 20px rgba(0,242,254,0.4));
         }
+        
+        /* University Typography Matching Name Style */
+        .university-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+        
         #home p { font-size: 1.5rem; color: #94a3b8; max-width: 700px; margin-bottom: 40px; letter-spacing: 1px; }
         
         /* Premium Glowing Button */
@@ -89,14 +102,6 @@
             background: var(--neon-cyan); color: var(--bg-dark);
             box-shadow: 0 0 30px var(--neon-cyan); transform: translateY(-3px);
         }
-
-        /* About Section Premium Glass card */
-        .about-card {
-            background: linear-gradient(135deg, rgba(19,27,46,0.7) 0%, rgba(9,13,22,0.8) 100%);
-            border: 1px solid rgba(255,255,255,0.05); padding: 40px; border-radius: 15px;
-            text-align: center; max-width: 900px; margin: 0 auto; box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-        }
-        .about-card p { line-height: 1.8; color: #cbd5e1; font-size: 1.3rem; }
 
         /* ULTRA 3D FLASHCARDS SECTION */
         .flashcard-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 20px; }
@@ -113,7 +118,6 @@
             background: var(--card-bg); border: 1px solid rgba(0, 242, 254, 0.15); color: var(--neon-cyan); 
             font-family: 'Orbitron', sans-serif; font-size: 1.6rem; font-weight: 700;
         }
-        .card-front::bottom { content: ''; width: 50px; height: 2px; background: var(--neon-cyan); margin-top: 15px; }
         .card-front .icon { font-size: 4rem; margin-bottom: 20px; filter: drop-shadow(0 0 15px var(--neon-cyan)); }
         
         .card-back { 
@@ -139,7 +143,7 @@
         .project-card h3 { color: #fff; font-family: 'Orbitron', sans-serif; margin-bottom: 15px; font-size: 1.4rem; }
         .project-card p { color: #94a3b8; font-size: 1.1rem; line-height: 1.6; }
 
-        /* Contact Section Premium Footer */
+        /* Contact Section */
         #contact { text-align: center; }
         .contact-box { background: var(--card-bg); padding: 40px; border-radius: 15px; display: inline-block; border: 1px solid rgba(79, 172, 254, 0.1); }
         .contact-info { margin-top: 10px; display: flex; flex-direction: column; gap: 15px; font-size: 1.3rem; }
@@ -147,10 +151,10 @@
 
         footer { border-top: 1px solid rgba(255,255,255,0.05); text-align: center; padding: 40px; margin-top: 80px; color: #475569; font-size: 1rem; font-family: 'Orbitron', sans-serif; }
 
-        /* Mobile Optimization */
         @media (max-width: 768px) {
             nav { padding: 15px; flex-direction: column; gap: 10px; }
             #home h1 { font-size: 2.8rem; }
+            .university-title { font-size: 1.4rem; letter-spacing: 2px; }
             .section-title { font-size: 2rem; }
             section { padding: 100px 20px 40px; }
         }
@@ -162,8 +166,8 @@
     <nav>
         <div class="logo">MAK.ANALYTICS</div>
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="#analysis">3D Analysis</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -173,23 +177,15 @@
     <!-- Home Section -->
     <section id="home">
         <h1>MD ASLAM <span>KHAN</span></h1>
+        <div class="university-title">Bangalore University</div>
         <p>Advanced Cricket Analyst & Next-Gen Content Creator. Decoding statistics, match tactics, and elite player strategies.</p>
         <a href="#analysis" class="btn">Launch Dashboard</a>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-        <h2 class="section-title">About Leader</h2>
-        <div class="about-card">
-            <p>Mera naam Md Aslam Khan hai. Main cricket ke complex data metrics, underlying strategies aur match data visualizations ko analyze karke unhein simplified high-end video aur graphical content mein convert karta hoon. I am here to change the way fans perceive the game of cricket.</p>
-        </div>
     </section>
 
     <!-- Ultra 3D Flashcards Section -->
     <section id="analysis">
         <h2 class="section-title">Core Metrics</h2>
         <div class="flashcard-container">
-            <!-- Card 1 -->
             <div class="card">
                 <div class="card-inner">
                     <div class="card-front">
@@ -202,7 +198,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Card 2 -->
             <div class="card">
                 <div class="card-inner">
                     <div class="card-front">
@@ -215,7 +210,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Card 3 -->
             <div class="card">
                 <div class="card-inner">
                     <div class="card-front">
@@ -261,7 +255,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>© 2026 MD ASLAM KHAN. ARCHITECTED VIA GITHUB PAGES.</p>
     </footer>
