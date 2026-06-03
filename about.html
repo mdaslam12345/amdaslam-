@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Md Aslam Khan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #090d16;
+            --card-bg: #131b2e;
+            --neon-cyan: #00f2fe;
+            --neon-purple: #4facfe;
+            --text-main: #f1f5f9;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            background-color: var(--bg-dark); 
+            color: var(--text-main); 
+            font-family: 'Rajdhani', sans-serif; 
+            font-size: 1.2rem;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(0, 242, 252, 0.05) 0%, transparent 50%);
+            z-index: -1;
+        }
+
+        /* Glassmorphism Navbar */
+        nav { 
+            background: rgba(9, 13, 22, 0.8); 
+            position: fixed; width: 100%; top: 0; z-index: 1000; 
+            padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; 
+            border-bottom: 1px solid rgba(0, 242, 254, 0.2); 
+            backdrop-filter: blur(15px);
+        }
+        .logo { 
+            font-family: 'Orbitron', sans-serif; 
+            font-size: 1.6rem; font-weight: 700; 
+            background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .nav-links { display: flex; list-style: none; gap: 30px; }
+        .nav-links a { text-decoration: none; color: #94a3b8; font-weight: 700; transition: 0.3s; text-transform: uppercase; letter-spacing: 1px; }
+        .nav-links a:hover { color: var(--neon-cyan); }
+
+        /* About Layout */
+        .about-section { padding: 150px 40px 80px; max-width: 900px; margin: 0 auto; }
+        .section-title { 
+            text-align: center; font-family: 'Orbitron', sans-serif; font-size: 2.8rem; margin-bottom: 40px; 
+            text-transform: uppercase; letter-spacing: 2px;
+            background: linear-gradient(180deg, #fff, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+
+        .about-card {
+            background: linear-gradient(135deg, rgba(19,27,46,0.8) 0%, rgba(9,13,22,0.9) 100%);
+            border: 1px solid rgba(0, 242, 254, 0.2); padding: 50px; border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6); line-height: 1.9; color: #cbd5e1; font-size: 1.3rem;
+        }
+        
+        .about-card h3 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--neon-cyan);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .highlight { color: #fff; font-weight: 700; }
+        
+        .back-btn {
+            display: inline-block; margin-top: 40px; text-decoration: none;
+            color: var(--neon-cyan); font-family: 'Orbitron', sans-serif; font-weight: 700;
+            border: 1px solid var(--neon-cyan); padding: 10px 25px; border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .back-btn:hover {
+            background: var(--neon-cyan); color: var(--bg-dark); box-shadow: 0 0 20px var(--neon-cyan);
+        }
+
+        footer { text-align: center; padding: 40px; margin-top: 60px; color: #475569; font-size: 1rem; font-family: 'Orbitron', sans-serif; border-top: 1px solid rgba(255,255,255,0.05); }
+
+        @media (max-width: 768px) {
+            nav { padding: 15px; flex-direction: column; gap: 10px; }
+            .about-section { padding: 120px 20px 40px; }
+            .about-card { padding: 30px; font-size: 1.1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Premium Navigation -->
+    <nav>
+        <div class="logo">MAK.ANALYTICS</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Content Section -->
+    <div class="about-section">
+        <h2 class="section-title">Biography</h2>
+        <div class="about-card">
+            <p>
+                Welcome to my digital arena. I am <span class="highlight">Md Aslam Khan</span>, an elite-level Cricket Analyst and Next-Gen Digital Content Creator proudly associated with <span class="highlight">Bangalore University</span>. For me, cricket is not merely a sport played with leather and willow—it is a sophisticated matrix of patterns, human psychology, and dynamic physics.
+            </p>
+            
+            <h3>My Core Mission</h3>
+            <p>
+                The modern cricketing landscape generates massive volumes of raw data, but data without context is just noise. My vision is to bridge the gap between high-level cricketing analytics and the passionate global fanbase. I decode complex tactical variables—ranging from powerplay over optimization to intricate bowler vs. batsman matchups—and transform them into highly engaging, cinematic visual reports and interactive content engines.
+            </p>
+
+            <h3>The Analytics Approach</h3>
+            <p>
+                By engineering custom data representations, hosting insightful strategic audio sessions, and constructing quick-hitting digital trivia narratives, I ensure every single match story is told accurately from behind the boundary line. If you view cricket through a lens of profound tactical curiosity rather than just casual entertainment, you have arrived at the absolute epicenter of cricket modernism.
+            </p>
+            
+            <center><a href="index.html" class="back-btn">← Return To Dashboard</a></center>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 MD ASLAM KHAN. ARCHITECTED VIA GITHUB PAGES.</p>
+    </footer>
+
+</body>
+</html>
