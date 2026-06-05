@@ -98,12 +98,13 @@
             display: flex; flex-direction: column;
         }
         
-        /* Fixed image reference matching exact file system names */
+        /* Fixed image reference matching exact file system casing from your repository */
         .card-front img { 
             width: 100%; 
             height: 82%; 
             object-fit: cover; 
             border-bottom: 2px solid rgba(0, 242, 254, 0.2);
+            background-color: #0f172a;
         }
         
         .card-front .image-title {
@@ -168,7 +169,7 @@
         
         <div class="project-grid">
             
-            <!-- Card 1: Fixed name match to "Photo 1.jpg" -->
+            <!-- Card 1: Exact Case-Sensitive Match to "Photo 1.jpg" -->
             <div class="project-card">
                 <div class="card-inner">
                     <div class="card-front">
@@ -182,7 +183,7 @@
                 </div>
             </div>
 
-            <!-- Card 2: Fixed name match to "photo 2.jpg" -->
+            <!-- Card 2: Exact Case-Sensitive Match to "photo 2.jpg" -->
             <div class="project-card">
                 <div class="card-inner">
                     <div class="card-front">
@@ -196,7 +197,7 @@
                 </div>
             </div>
 
-            <!-- Card 3: Fixed name match to "Photo 3.jpg" -->
+            <!-- Card 3: Exact Case-Sensitive Match to "Photo 3.jpg" -->
             <div class="project-card">
                 <div class="card-inner">
                     <div class="card-front">
@@ -210,7 +211,7 @@
                 </div>
             </div>
 
-            <!-- Card 4: Fixed name match to "photo 4.jpg" -->
+            <!-- Card 4: Exact Case-Sensitive Match to "photo 4.jpg" -->
             <div class="project-card">
                 <div class="card-inner">
                     <div class="card-front">
